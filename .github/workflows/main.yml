@@ -1,4 +1,4 @@
-name: podcast-of-engineers
+name: podcast-site-for-engineers
 
 on:
   push:
@@ -9,7 +9,7 @@ jobs:
   build-deploy:
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
       with:
         submodules: true
 
@@ -20,7 +20,7 @@ jobs:
         extended: true
 
     - name: Build
-      run: hugo --minify --baseURL=https://podcast-of-engineers.github.io
+      run: hugo --minify --baseURL=https://podcast-site-for-engineers.github.io
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
